@@ -2,6 +2,19 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def calculate_returns(initial_investment, monthly_contribution, years, annual_growth_rate):
     months = years * 12
     monthly_growth_rate = (1 + annual_growth_rate) ** (1/12) - 1
