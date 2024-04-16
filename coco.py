@@ -2,18 +2,16 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# CSS to hide Streamlit's default header (and possibly other elements)
+hide_streamlit_style = """
+            <style>
+            /* This hides the Streamlit header */
+            header {visibility: hidden;}
+            /* Optionally, hide the footer */
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)  # Applying the CSS to the Streamlit app
 
 def calculate_returns(initial_investment, monthly_contribution, years, annual_growth_rate):
     months = years * 12
