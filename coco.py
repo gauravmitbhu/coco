@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 def calculate_returns(initial_investment, monthly_contribution, years, annual_growth_rate):
     months = years * 12
