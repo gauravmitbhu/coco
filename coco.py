@@ -52,10 +52,13 @@ st.image(image, caption="Coco's Risk model based smart monthly investment")
 
 
 st.write("Coco-based investment vs. other investments")
-import plotly.express as px
-df=px.data.tips()
-fig=px.bar(df,x='total_bill',y='day', orientation='h')
-st.write(fig)
+import plotly.graph_objects as go
+
+fig = go.Figure(go.Bar(
+            x=[20, 14, 23],
+            y=['giraffes', 'orangutans', 'monkeys'],
+            orientation='h'))
+st.plotly_chart(fig, use_container_width=True)
 #opening the image
 
 
